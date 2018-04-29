@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sir.library.photopicker">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+
+        <!--应用间共享文件,Library_Update 已经引入，未引入会报FileUriExposedException-->
+        <!--        <provider
+                    android:name="android.support.v4.content.FileProvider"
+                    android:authorities="${applicationId}"
+                    android:exported="false"
+                    android:grantUriPermissions="true">
+
+                    <meta-data
+                        android:name="android.support.FILE_PROVIDER_PATHS"
+                        android:resource="@xml/__picker_provider_paths" />
+
+                </provider>-->
+
+        <activity
+            android:name=".PhotoPickerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".PhotoPagerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+    </application>
+
+
+</manifest>
